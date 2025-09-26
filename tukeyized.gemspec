@@ -11,9 +11,10 @@ Gem::Specification.new do |s|
   s.name = 'tukeyized'
   s.version = '0.0.0'
   s.license = 'MIT'
-  s.summary = '...'
+  s.summary = 'Remove Array elements using Tukey\'s method'
   s.description =
-    '...'
+    'This gem adds a simple tukeyized method to the Array class that ' \
+    'returns a copy of the array without extreme values using Tukey\'s method'
   s.authors = ['Yegor Bugayenko']
   s.email = 'yegor256@gmail.com'
   s.homepage = 'https://github.com/yegor256/tukeyized'
