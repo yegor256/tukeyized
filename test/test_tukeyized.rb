@@ -14,4 +14,8 @@ class TestWinsorized < Minitest::Test
   def test_simple
     assert_equal([1, 3, 2, 5], [1, 3, 2, 5, 800].tukeyized)
   end
+
+  def test_empty_array
+    assert_equal([], [].tukeyized)
+  end
 end
