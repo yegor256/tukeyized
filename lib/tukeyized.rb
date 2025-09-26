@@ -9,25 +9,25 @@
 # Copyright:: Copyright (c) 2025 Yegor Bugayenko
 # License:: MIT
 class Array
-  # Replaces extreme values with closest equivalents.
+  # Removes extreme values.
   #
   # @return [Array] New array
-  def tukeyized(fraction: 0.1)
+  def tukeyized
     return [] if empty?
     percentile = lambda do |a, x|
       k = (x / 100.0) * (a.length - 1)
       f = k.floor
       c = k.ceil
       return a[k.to_i] if f == c
-      a[f] + (a[c] - a[f]) * (k - f)
+      a[f] + ((a[c] - a[f]) * (k - f))
     end
     a = sort
-    n = a.size
+    a.size
     q1 = percentile.call(a, 25)
     q3 = percentile.call(a, 75)
     iqr = q3 - q1
-    lower = q1 - 1.5 * iqr
-    upper = q3 + 1.5 * iqr
-    select { |x| x >= lower && x <= upper }
+    lower = q1 - (1.5 * iqr)
+    upper = q3 + (1.5 * iqr)
+    select { |x| x.between?(lower, upper) }
   end
 end

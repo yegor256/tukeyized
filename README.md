@@ -17,7 +17,7 @@ It uses the [Tukey's method].
 
 ```ruby
 require 'tukeyized'
-puts [1, 6, 3, 3, 2, 8].tukeyized
+puts [1, 6, 3, 8888, 3, 2, 8, -19292].tukeyized
 ```
 
 Prints:
