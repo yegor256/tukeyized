@@ -1,4 +1,4 @@
-# ...
+# Remove Array Elements Using Tukey's Method
 
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/tukeyized)](https://www.rultor.com/p/yegor256/tukeyized)
 [![We recommend RubyMine](https://www.elegantobjects.org/rubymine.svg)](https://www.jetbrains.com/ruby/)
@@ -11,16 +11,19 @@
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/tukeyized)](https://hitsofcode.com/view/github/yegor256/tukeyized)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/tukeyized/blob/master/LICENSE.txt)
 
+This gem adds a simple `tukeyized` to the `Array` class.
+The method returns a copy of the array without extreme values.
+It uses the [Tukey's method].
 
 ```ruby
 require 'tukeyized'
-puts [1, 6, 3, 3, 2, 8, 65536].tukeyized
+puts [1, 6, 3, 3, 2, 8].tukeyized
 ```
 
 Prints:
 
 ```text
-1, 6, 3, 3, 2, 8, 8
+1, 6, 3, 3, 2, 8
 ```
 
 That's it.
@@ -41,4 +44,4 @@ bundle exec rake
 
 If it's clean and you don't see any error messages, submit your pull request.
 
-[to_sentence]: https://api.rubyonrails.org/classes/Array.html#method-i-to_sentence
+[Tukey's method]: https://en.wikipedia.org/wiki/Tukey%27s_range_test
