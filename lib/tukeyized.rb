@@ -52,7 +52,6 @@ class Array
       a[f] + ((a[c] - a[f]) * (k - f))
     end
     a = sort
-    a.size
     q1 = percentile.call(a, 25)
     q3 = percentile.call(a, 75)
     iqr = q3 - q1
