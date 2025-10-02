@@ -48,7 +48,6 @@ class Array
       k = (x / 100.0) * (a.length - 1)
       f = k.floor
       c = k.ceil
-      return a[k.to_i] if f == c
       a[f] + ((a[c] - a[f]) * (k - f))
     end
     a = sort
