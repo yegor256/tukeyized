@@ -23,5 +23,6 @@ class TestWinsorized < Minitest::Test
 
   def test_passes_short_array
     assert_equal([1, 33_333], [1, 33_333].tukeyized)
+    assert_equal([-88, 99], [-88, 99].tukeyized)
   end
 end
