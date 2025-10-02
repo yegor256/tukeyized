@@ -43,7 +43,7 @@ class Array
   #
   # @return [Array] New array without extreme values
   def tukeyized
-    return [] if empty?
+    return self if count < 3
     percentile = lambda do |a, x|
       k = (x / 100.0) * (a.length - 1)
       f = k.floor
