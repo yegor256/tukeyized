@@ -23,11 +23,11 @@ GEM
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
-    mdl (0.14.0)
+    mdl (0.15.0)
       kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.1)
-      mixlib-cli (~> 2.1, >= 2.1.1)
-      mixlib-config (>= 2.2.1, < 4)
+      mixlib-cli
+      mixlib-config
       mixlib-shellout
     minitest (5.26.2)
     minitest-reporters (1.7.1)
