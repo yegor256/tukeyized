@@ -29,7 +29,8 @@ GEM
       mixlib-cli
       mixlib-config
       mixlib-shellout
-    minitest (5.27.0)
+    minitest (6.0.0)
+      prism (~> 1.5)
     minitest-reporters (1.7.1)
       ansi
       builder
@@ -111,7 +112,7 @@ PLATFORMS
 
 DEPENDENCIES
   mdl (~> 0.13)
-  minitest (~> 5.25)
+  minitest (~> 6.0)
   minitest-reporters (~> 1.7)
   rake (~> 13.2)
   rubocop (~> 1.64)
