@@ -100,7 +100,7 @@ GEM
     win32-process (0.10.0)
       ffi (>= 1.0.0)
     wmi-lite (1.0.7)
-    yard (0.9.38)
+    yard (0.9.39)
 
 PLATFORMS
   aarch64-linux
