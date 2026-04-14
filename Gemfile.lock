@@ -30,7 +30,7 @@ GEM
       mixlib-cli
       mixlib-config
       mixlib-shellout
-    minitest (6.0.3)
+    minitest (6.0.4)
       drb (~> 2.0)
       prism (~> 1.5)
     minitest-reporters (1.8.0)
