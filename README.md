@@ -11,7 +11,7 @@
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/tukeyized)](https://hitsofcode.com/view/github/yegor256/tukeyized)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/tukeyized/blob/master/LICENSE.txt)
 
-This gem adds a simple `tukeyized` to the `Array` class.
+This gem adds a simple `tukeyized` method to the `Array` class.
 The method returns a copy of the array without extreme values.
 It uses the [Tukey's method].
 

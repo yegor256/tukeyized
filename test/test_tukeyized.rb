@@ -10,7 +10,7 @@ require_relative '../lib/tukeyized'
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
 # Copyright:: Copyright (c) 2025 Yegor Bugayenko
 # License:: MIT
-class TestWinsorized < Minitest::Test
+class TestTukeyized < Minitest::Test
   def test_filters_big_numbers
     assert_equal([1, 3, 2, 5], [1, 3, 2, 5, 800].tukeyized)
     assert_equal([1, 6, 3, 3, 2, 8], [1, 6, 3, 8888, 3, 2, 8, -19_292].tukeyized)
