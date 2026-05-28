@@ -44,18 +44,16 @@ class Array
   # @return [Array] New array without extreme values
   def tukeyized
     return self if count < 3
-    percentile = lambda do |a, x|
-      k = (x / 100.0) * (a.length - 1)
-      f = k.floor
-      c = k.ceil
-      a[f] + ((a[c] - a[f]) * (k - f))
-    end
+    percentile =
+      lambda do |a, x|
+        k = (x / 100.0) * (a.length - 1)
+        f = k.floor
+        a[f] + ((a[k.ceil] - a[f]) * (k - f))
+      end
     a = sort
-    q1 = percentile.call(a, 25)
-    q3 = percentile.call(a, 75)
-    iqr = q3 - q1
-    lower = q1 - (1.5 * iqr)
-    upper = q3 + (1.5 * iqr)
-    select { |x| x.between?(lower, upper) }
+    first = percentile.call(a, 25)
+    third = percentile.call(a, 75)
+    iqr = third - first
+    grep((first - (1.5 * iqr))..(third + (1.5 * iqr)))
   end
 end

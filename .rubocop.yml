@@ -14,6 +14,7 @@ plugins:
   - rubocop-rake
   - rubocop-minitest
   - rubocop-performance
+  - rubocop-elegant
 Layout/EndOfLine:
   EnforcedStyle: lf
 Style/EvalWithLocation:
@@ -32,3 +33,8 @@ Layout/EmptyLineAfterGuardClause:
   Enabled: false
 Metrics/ParameterLists:
   Enabled: false
+Elegant/ClassInModule:
+  Exclude:
+    - 'lib/**/*'
+    - '**/test_*.rb'
+    - '**/*Test.rb'
