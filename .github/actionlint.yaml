@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+# GitHub provides this hosted image, but actionlint's built-in list lags behind.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04
