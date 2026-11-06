@@ -23,6 +23,15 @@ class TestTukeyized < Minitest::Test
     assert_empty([].tukeyized)
   end
 
+  def test_copies_short_arrays
+    [[], [1], [1, 2]].each do |original|
+      result = original.tukeyized
+      refute_same(original, result)
+      result << 3
+      refute_equal(original, result)
+    end
+  end
+
   def test_passes_short_array
     assert_equal([1, 33_333], [1, 33_333].tukeyized)
     assert_equal([-88, 99], [-88, 99].tukeyized)
