@@ -1,15 +1,15 @@
 # Remove Array Elements Using Tukey's Method
 
-[![evOps By Rultor.com][ai]][a]
-[![e recommend RubyMine][bi]][b]
+[![DevOps By Rultor.com][ai]][a]
+[![We recommend RubyMine][bi]][b]
 
-[![ake][ci]][c]
-[![DD status][di]][d]
-[![em Version][ei]][e]
-[![est Coverage][fi]][f]
-[![ard Docs][gi]][g]
-[![its-of-Code][hi]][h]
-[![icense][ii]][i]
+[![rake][ci]][c]
+[![PDD status][di]][d]
+[![Gem Version][ei]][e]
+[![Test Coverage][fi]][f]
+[![Yard Docs][gi]][g]
+[![Hits-of-Code][hi]][h]
+[![License][ii]][i]
 
 This gem adds a simple `tukeyized` method to the `Array` class.
 The method returns a copy of the array without extreme values.
